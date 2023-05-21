@@ -2,7 +2,7 @@ from googleapiclient.discovery import build
 import streamlit as st
 import pandas as pd
 
-apikey = "AIzaSyANf58hyQPwwW66IVXamoKNgILwXtiEG5U"
+
 #channel_id = "UCnjU1FHmao9YNfPzE039YTw"
 youtube = build("youtube", "v3", developerKey = apikey)
 scrapped_data = {}
