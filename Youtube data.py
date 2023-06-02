@@ -437,13 +437,13 @@ def insert_comments_sql(channel_name):
 # Creating Streamlit app
    
 st.set_page_config(layout="wide")
-st.title ("Youtube Data Harvesting")                    
+st.title (":red[Youtube Data Harvesting]")                    
 tab1,tab2 = st.tabs(["Scrape", "Analysis"])
 with tab1:
         
     client = pymongo.MongoClient("mongodb://localhost:27017/")
     db = client["youtube_database"]
-    st.write ("Please Enter the Channel Id")
+    st.write (":green[Please Enter the Channel Id]")
     channel_id = st.text_input('Channel_id')
 
     if "button1" not in st.session_state:
@@ -477,7 +477,7 @@ with tab1:
             st.success('Successfully Uploaded to MongoDB')
 
     option = st.selectbox(
-        'Select the Database',db.list_collection_names()
+        ':blue[Select the Database]',db.list_collection_names()
     )
 
     if st.button("Migrate to SQL"):
@@ -499,7 +499,7 @@ with tab2:
         "What are the names of all the channels that have published videos in the year2022?",
         "What is the average duration of all videos in each channel, and what are their corresponding channel names?",
         "Which videos have the highest number of comments, and what are their corresponding channel names?")
-    Questions = st.selectbox("Select the Question",
+    Questions = st.selectbox(":green[Select the Question]",
         (Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10)
     )
     # SQL connection
@@ -510,7 +510,7 @@ with tab2:
     cursor = con.cursor()
     if Questions == Q1:
         channel_name = st.selectbox(
-        'Select the Channel Name',db.list_collection_names()
+        ':blue[Select the Channel Name]',db.list_collection_names()
          )
         df = cursor.execute('''SELECT channel.channel_name, videos.video_name
                             from channel
