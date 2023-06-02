@@ -11,7 +11,7 @@ from sqlalchemy import create_engine
 import re
 from datetime import timedelta
 
-# API key and mentioning build parameter
+# API key and mentioning build parameters
 apikey = "*******"
 youtube = build("youtube", "v3", developerKey = apikey)
 scrapped_data = {}
