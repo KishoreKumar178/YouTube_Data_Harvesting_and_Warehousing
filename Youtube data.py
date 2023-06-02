@@ -12,7 +12,7 @@ import re
 from datetime import timedelta
 
 # API key and mentioning build parameter
-apikey = "AIzaSyC1uCwzW-JkOzZB9Jxb8Aw0xyExeITcLHg"
+apikey = "*******"
 youtube = build("youtube", "v3", developerKey = apikey)
 scrapped_data = {}
 
