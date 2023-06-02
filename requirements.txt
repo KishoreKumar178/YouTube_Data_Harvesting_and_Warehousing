@@ -1,0 +1,8 @@
+googleapiclient
+pandas
+pymongo
+mysql-connector-python
+pymysql
+datetime
+streamlit
+sqlalchemy
